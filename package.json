@@ -1,0 +1,20 @@
+{
+  "name": "eagendatypescript_academia_do_programador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasBleyer/eAgendaTypeScript_Academia_do_Programador.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasBleyer/eAgendaTypeScript_Academia_do_Programador/issues"
+  },
+  "homepage": "https://github.com/LucasBleyer/eAgendaTypeScript_Academia_do_Programador#readme"
+}
