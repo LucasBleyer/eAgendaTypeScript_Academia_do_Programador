@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eAgenda | Home</title>
+
+  <link rel="stylesheet" href="./public/css/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+  crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+  crossorigin="anonymous" defer></script>
+
+  <script type= "module" src="./dist/index.js" defer></script>
+
+</head>
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2 border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        eAgenda
+        <span class="badge bg-warning text-bg-light">web</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center text-md-start" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold fs-5">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../../index.html">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cadastros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active bg-primary" href="./tarefa.list.html">Tarefas</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Contatos</a></li>
+              <li><a class="dropdown-item" href="#">Compromissos</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <li class="nav-item ms-auto d-none d-lg-block">
+          <a href="http://www.academiadoprogramador.com" target="_blank">
+            <img src="../assets/logo-titulo.svg" width="200" class="d-inline-block p-2">
+          </a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-2">
+    <div class="text-center text-md-start p-0 p-md-5">
+      <section id="cabecalho">
+        <header>
+          <h1 class="title text-light fw-bold">Tarefas</h1>
+          <p class="fs-5 mt-3 text-warning fw-semibold">Cadastre suas tarefas diárias por prioridade.</p>
+          <a href="./tarefa.create.html" class="btn btn-lg btn-primary px-5">Nova Tarefa</a>
+        </header>
+      </section>
+
+      <section id="tabela">
+        <div class="card text-bg-dark border-secondary mt-4 p-2">
+          <div class="card-body">
+            <table id="tabela" class="table table-dark text-center table-hover">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Descrição</th>
+                  <th>Data de Criação</th>
+                  <th>Data de Conclusão</th>
+                  <th>Prioridade</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th>1</th>
+                  <th>Teste</th>
+                  <th>08/07/2022</th>
+                  <th>Data de Conclusão</th>
+                  <th>Alta</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
