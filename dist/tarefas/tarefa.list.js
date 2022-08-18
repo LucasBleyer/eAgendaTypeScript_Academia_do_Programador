@@ -22,11 +22,20 @@ class TarefaPaginaListagem {
             btnEditar.innerText = "Editar";
             btnEditar.className = "btn btn-primary";
             btnEditar.addEventListener("click", () => {
-                const idSelecionado = novaLinha.cells[0].innerText;
+                const idSelecionado = tarefa.id;
                 //query parameter
                 window.location.href = `tarefa.create.html?id=${idSelecionado}`;
             });
+            const btnExcluir = document.createElement("a");
+            btnExcluir.innerText = "Excluir";
+            btnExcluir.className = " m-1 btn btn-danger";
+            btnExcluir.addEventListener("click", () => {
+                const idSelecionado = tarefa.id;
+                this.repositorioTarefas.excluir(idSelecionado);
+                window.location.reload();
+            });
             celulaBotoes.appendChild(btnEditar);
+            celulaBotoes.appendChild(btnExcluir);
         });
     }
 }
