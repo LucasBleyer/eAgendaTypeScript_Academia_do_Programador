@@ -5,28 +5,56 @@ import { Tarefa } from "./tarefa.model.js";
 export class TarefaRepositorioLocalStorage implements IRepositorio<Tarefa>, IRepositorioSerializavel{
   
   private readonly localStorage: Storage;
-  private readonly tarefas: Tarefa[];
 
-  constructor(){
+  private tarefas: Tarefa[];
+
+  constructor() {
     this.localStorage = window.localStorage;
+
     this.tarefas = this.selecionarTodos();
   }
-  gravar(): void {
+
+  public gravar(): void {
     const tarefasJsonString = JSON.stringify(this.tarefas);
+
     this.localStorage.setItem("tarefas", tarefasJsonString);
   }
-  
-  inserir(registro: Tarefa): void {
+
+  public inserir(registro: Tarefa): void {
     this.tarefas.push(registro);
     this.gravar();
   }
-  selecionarTodos(): Tarefa[] {
+
+  public editar(id: string, registroEditado: Tarefa): void {
+    const indexSelecionado = this.tarefas.findIndex(x => x.id === id);
+
+    this.tarefas[indexSelecionado] = {
+      id: id,
+      descricao: registroEditado.descricao,
+      dataCriacao: registroEditado.dataCriacao,
+      prioridade: registroEditado.prioridade
+    }
+
+    this.gravar();
+  }
+
+  public excluir(id: string): void {
+    this.tarefas = this.tarefas.filter(x => x.id !== id);
+
+    this.gravar();
+  }
+
+  public selecionarTodos(): Tarefa[] {
     const dados = this.localStorage.getItem("tarefas");
 
-    if(!dados)
-      return[];
-    else
-      return JSON.parse(dados);
+    if (!dados)
+      return [];
+
+    return JSON.parse(dados);
+  }
+
+  public selecionarPorId(id: string): Tarefa | undefined {
+    return this.tarefas.find(x => x.id === id);
   }
 
 }

@@ -26,5 +26,5 @@
 
 tbody > tr:hover > * {
   background-color: #ffff !important;
-  color: black !important;
+  color: rgb(254, 254, 254) !important;
 }

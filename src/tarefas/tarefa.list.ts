@@ -29,6 +29,22 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem{
 
         novaCelula.innerText = valor;
       });
+
+      const celulaBotoes = novaLinha.insertCell();
+
+      const btnEditar = document.createElement("a");
+      btnEditar.innerText = "Editar";
+      btnEditar.className = "btn btn-primary"
+
+      btnEditar.addEventListener("click", () => {
+        const idSelecionado = novaLinha.cells[0].innerText;
+
+        //query parameter
+        window.location.href = `tarefa.create.html?id=${idSelecionado}`;
+      });
+      
+      celulaBotoes.appendChild(btnEditar);
+
     })
 
   }
