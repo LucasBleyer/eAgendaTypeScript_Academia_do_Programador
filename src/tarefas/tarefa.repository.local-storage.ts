@@ -9,7 +9,7 @@ export class TarefaRepositorioLocalStorage implements IRepositorio<Tarefa>, IRep
 
   constructor(){
     this.localStorage = window.localStorage;
-    this.tarefas = this.selecionarTdoso();
+    this.tarefas = this.selecionarTodos();
   }
   gravar(): void {
     const tarefasJsonString = JSON.stringify(this.tarefas);
@@ -20,7 +20,7 @@ export class TarefaRepositorioLocalStorage implements IRepositorio<Tarefa>, IRep
     this.tarefas.push(registro);
     this.gravar();
   }
-  selecionarTdoso(): Tarefa[] {
+  selecionarTodos(): Tarefa[] {
     const dados = this.localStorage.getItem("tarefas");
 
     if(!dados)
