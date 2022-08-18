@@ -34,7 +34,7 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem{
 
       const btnEditar = document.createElement("a");
       btnEditar.innerText = "Editar";
-      btnEditar.className = "btn btn-primary"
+      btnEditar.className = "btn btn-outline-info"
 
       btnEditar.addEventListener("click", () => {
         const idSelecionado = tarefa.id;
@@ -45,7 +45,7 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem{
 
       const btnExcluir = document.createElement("a");
       btnExcluir.innerText = "Excluir";
-      btnExcluir.className = " m-1 btn btn-danger"
+      btnExcluir.className = " m-1 btn btn-outline-danger"
 
       btnExcluir.addEventListener("click", () => {
         const idSelecionado = tarefa.id;

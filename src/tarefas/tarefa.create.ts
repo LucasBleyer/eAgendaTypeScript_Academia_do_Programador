@@ -60,9 +60,7 @@ class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario{
       this.repositorioTarefas.inserir(tarefa);
     else{
       this.repositorioTarefas.editar(tarefa.id, tarefa);
-    }
-
-    this.repositorioTarefas.inserir(tarefa);
+    }  
 
     //redirecionar user
     window.location.href = "tarefa.list.html";

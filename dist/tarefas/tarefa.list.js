@@ -20,7 +20,7 @@ class TarefaPaginaListagem {
             const celulaBotoes = novaLinha.insertCell();
             const btnEditar = document.createElement("a");
             btnEditar.innerText = "Editar";
-            btnEditar.className = "btn btn-primary";
+            btnEditar.className = "btn btn-outline-info";
             btnEditar.addEventListener("click", () => {
                 const idSelecionado = tarefa.id;
                 //query parameter
@@ -28,7 +28,7 @@ class TarefaPaginaListagem {
             });
             const btnExcluir = document.createElement("a");
             btnExcluir.innerText = "Excluir";
-            btnExcluir.className = " m-1 btn btn-danger";
+            btnExcluir.className = " m-1 btn btn-outline-danger";
             btnExcluir.addEventListener("click", () => {
                 const idSelecionado = tarefa.id;
                 this.repositorioTarefas.excluir(idSelecionado);

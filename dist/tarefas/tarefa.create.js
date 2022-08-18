@@ -41,7 +41,6 @@ class TarefaPaginaCadastro {
         else {
             this.repositorioTarefas.editar(tarefa.id, tarefa);
         }
-        this.repositorioTarefas.inserir(tarefa);
         //redirecionar user
         window.location.href = "tarefa.list.html";
     }
